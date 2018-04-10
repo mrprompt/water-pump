@@ -8,8 +8,8 @@
 #include <LedControl.h>
 
 #define INTERVALO_ENVIO_THINGSPEAK    60000 // intervalo entre envios de dados ao ThingSpeak (em ms)
-#define INTERVALO_LEITURA_THINGSPEAK  1000  // intervalo entre leitura de dados do ThingSpeak (em ms)
-#define INTERVALO_LEITURA_SOLO        1000 // intervalo entre leitura de dados do sensor de solo (em ms)
+#define INTERVALO_LEITURA_THINGSPEAK  5000  // intervalo entre leitura de dados do ThingSpeak (em ms)
+#define INTERVALO_LEITURA_SOLO        3000 // intervalo entre leitura de dados do sensor de solo (em ms)
 #define FUSO                          -3 // UTC -3:00 Brazil
 #define NTP_ADDRESS                   "a.st1.ntp.br" // NTP Server
 #define SOIL_SENSOR_PIN               A0
