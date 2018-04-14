@@ -9,9 +9,10 @@ void connectWifi(void)
   
   Serial.print("- Conectando-se à rede WiFi...");
 
-  WiFi.persistent( false );
+  WiFi.persistent(true);
   WiFi.mode(WIFI_STA);
   WiFi.begin(SSID_REDE, SENHA_REDE);
+  WiFi.setAutoReconnect(true);
 
   while (WiFi.status() != WL_CONNECTED)
   {

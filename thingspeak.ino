@@ -5,7 +5,7 @@ void enviaDados()
   //verifica se está conectado no WiFi e se é o momento de enviar dados ao ThingSpeak
   if (!client.connected() && (millis() - ultimaConexaoGravacao > INTERVALO_ENVIO_THINGSPEAK))
   {
-    sprintf(Fields, "field1=%d", ultimoValorSolo);
+    sprintf(Fields, "field1=%d", (int) ultimoValorSolo);
 
     Serial.print("- Enviando dados: ");
     Serial.println(Fields);
