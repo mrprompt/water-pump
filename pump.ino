@@ -6,11 +6,11 @@ void irrigacao()
     return;
   }
 
-  drawNeutralFace();
+//  drawNeutralFace();
 
-  startPump();
+//  startPump();
 
-  drawHappyFace();
+  drawSadFace();
 }
 
 void startPump()
@@ -20,7 +20,11 @@ void startPump()
 
   delay(WATER_TIME * 1000);
 
+  stopPump();
+}
+
+void stopPump()
+{
   Serial.println("- desligando bomba");
   digitalWrite(WATER_PUMP_PIN, LOW);    
 }
-

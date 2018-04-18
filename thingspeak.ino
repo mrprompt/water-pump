@@ -26,6 +26,12 @@ void recebeDados()
     
     if (comando == "DESLIGAR_VISOR")
         lc.shutdown(0, true);
+
+    if (comando == "LIGAR_BOMBA")
+      startPump();
+
+    if (comando == "DESLIGAR_BOMBA")
+      stopPump();
   }
 }
 
