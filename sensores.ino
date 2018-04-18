@@ -1,4 +1,4 @@
-int solo()
+void solo()
 {
   ultimoValorSolo = FazLeituraUmidade();
   ultimaLeituraSolo = millis();
@@ -7,7 +7,17 @@ int solo()
   Serial.print(ultimoValorSolo);
   Serial.println("%");
 
-  return ultimoValorSolo;
+  if (ultimoValorSolo >= SOIL_MEASURE_LIMIT && ultimoValorSolo <= SOIL_MEASURE_MAX) {
+    drawHappyFace();
+  }
+
+  if (ultimoValorSolo >= SOIL_MEASURE_MAX) {
+    drawHearth();
+  }
+
+  if (ultimoValorSolo < SOIL_MEASURE_LIMIT) {
+    drawSadFace();
+  }
 }
 
 //Função: faz a leitura do nível de umidade

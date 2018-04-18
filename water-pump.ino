@@ -53,7 +53,6 @@ void loop()
   timeClient.update();
 
   solo();
-  irrigacao();
   enviaDados();
   recebeDados();
 
